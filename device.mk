@@ -12,7 +12,8 @@ $(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    SettingsProviderResMarble
+    SettingsProviderResMarble \
+    WifiResMarble
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
