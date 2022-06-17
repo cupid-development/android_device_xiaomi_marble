@@ -12,6 +12,7 @@ $(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
+    FrameworksResMarble \
     SettingsProviderResMarble \
     WifiResMarble
 
