@@ -14,6 +14,7 @@ $(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
 PRODUCT_PACKAGES += \
     FrameworksResMarble \
     SettingsProviderResMarble \
+    SystemUIResMarble \
     WifiResMarble
 
 # Soong namespaces
