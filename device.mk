@@ -21,6 +21,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureResMarble \
     FrameworksResMarble \
+    NfcResMarble \
     SettingsProviderResMarble \
     SettingsProviderResMarbleCN \
     SettingsResMarble \
