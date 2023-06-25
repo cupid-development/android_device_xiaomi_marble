@@ -12,5 +12,8 @@ include vendor/xiaomi/marble/BoardConfigVendor.mk
 
 DEVICE_PATH := device/xiaomi/marble
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
+
 # Screen density
 TARGET_SCREEN_DENSITY := 440
