@@ -17,3 +17,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 
 # Screen density
 TARGET_SCREEN_DENSITY := 440
+
+# Vibrator
+TARGET_QTI_VIBRATOR_EFFECT_LIB := libqtivibratoreffect.xiaomi
+TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM := true
