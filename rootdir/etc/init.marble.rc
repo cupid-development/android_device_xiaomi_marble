@@ -1,0 +1,2 @@
+on property:ro.boot.hwc=CN
+    setprop bluetooth.device.default_name "Redmi Note 12 Turbo"
