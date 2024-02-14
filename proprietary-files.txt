@@ -109,6 +109,26 @@ vendor/firmware/aw882xx_acf.bin
 # Audio graph manager
 -vendor/lib/libagm.so
 -vendor/lib64/libagm.so
+vendor/bin/agmcap
+vendor/bin/agmcompressplay
+vendor/bin/agmplay
+vendor/bin/cplay
+vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
+vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc
+vendor/lib/libagm_compress_plugin.so
+vendor/lib/libagm_mixer_plugin.so
+vendor/lib/libagm_pcm_plugin.so
+vendor/lib/libagmclient.so
+vendor/lib/libagmmixer.so
+-vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
+vendor/lib64/libagm_compress_plugin.so
+vendor/lib64/libagm_mixer_plugin.so
+vendor/lib64/libagm_pcm_plugin.so
+vendor/lib64/libagmclient.so
+vendor/lib64/libagmmixer.so
+-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Batterysecret
 vendor/bin/batterysecret
