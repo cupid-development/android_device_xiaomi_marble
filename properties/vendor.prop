@@ -1,1 +1,4 @@
+# ALS
+vendor.sensors.als_correction.grabrect=736 8 864 136
+
 bluetooth.device.default_name=POCO F5
