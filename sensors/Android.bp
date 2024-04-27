@@ -1,0 +1,8 @@
+cc_library_shared {
+    name: "libssccalapi_shim",
+    shared_libs: [
+        "libbase",
+    ],
+    srcs: ["ssccalapi.cpp"],
+    vendor: true,
+}
