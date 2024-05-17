@@ -1,0 +1,24 @@
+type vendor_marbleLightSensor, domain;
+type vendor_marbleLightSensor_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(vendor_marbleLightSensor)
+
+hwbinder_use(vendor_marbleLightSensor)
+get_prop(vendor_marbleLightSensor, hwservicemanager_prop)
+
+allow vendor_marbleLightSensor self:socket create_socket_perms;
+allow vendor_marbleLightSensor self:qipcrtr_socket create_socket_perms;
+allowxperm vendor_marbleLightSensor self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm vendor_marbleLightSensor self:qipcrtr_socket ioctl msm_sock_ipc_ioctls;
+
+binder_use(vendor_marbleLightSensor)
+binder_call(vendor_marbleLightSensor, system_server)
+binder_call(system_server, vendor_marbleLightSensor)
+
+allow vendor_marbleLightSensor fwk_sensor_hwservice:hwservice_manager find;
+allow vendor_marbleLightSensor vendor_displayfeature_device:chr_file { ioctl open read write };
+
+permissive vendor_marbleLightSensor;
+
+get_prop(vendor_marbleLightSensor, vendor_sensors_prop)
+userdebug_or_eng(`get_prop(vendor_marbleLightSensor, vendor_sensors_debug_prop)');
