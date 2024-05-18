@@ -2,11 +2,11 @@ on property:ro.boot.hwc=CN
     setprop bluetooth.device.default_name "Redmi Note 12 Turbo"
 
 on property:ro.boot.product.hardware.sku=marble
-    enable nqnfc_2_0_hal_service
+    enable vendor.nfc_hal_service
 
-service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
+    override
     class early_hal
     user nfc
-    group nfc
-    override
+    group nfc drmrpc system
     disabled
