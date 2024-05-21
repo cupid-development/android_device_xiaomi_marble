@@ -111,6 +111,7 @@ vendor/etc/audio/sku_ukee/resourcemanager_ukee_mtp.xml
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/backend_conf.xml
 vendor/etc/card-defs.xml
+vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/microphone_characteristics.xml
