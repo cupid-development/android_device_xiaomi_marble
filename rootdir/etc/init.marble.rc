@@ -3,10 +3,18 @@ on property:ro.boot.hwc=CN
 
 on property:ro.boot.product.hardware.sku=marble
     enable vendor.nfc_hal_service
+    enable secureelement-hal_1_2
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     override
     class early_hal
     user nfc
     group nfc drmrpc system
+    disabled
+
+service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-service
+    override
+    class early_hal
+    user system
+    group system
     disabled
