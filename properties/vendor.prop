@@ -1,1 +1,5 @@
+# Bluetooth
 bluetooth.device.default_name=POCO F5
+
+# Display
+vendor.display.idle_time=0
