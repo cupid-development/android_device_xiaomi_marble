@@ -1,0 +1,17 @@
+cc_library_static {
+    name: "libsensor-notifier-ext-light",
+    vendor: true,
+    srcs: [
+        "RawLightNotifier.cpp",
+        "SensorNotifierExt.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libutils",
+        "android.frameworks.sensorservice@1.0",
+    ],
+    header_libs: [
+        "generated_kernel_headers",
+        "//device/xiaomi/sm8450-common:xiaomi_sm8450_sensor_notifier_headers",
+    ],
+}
