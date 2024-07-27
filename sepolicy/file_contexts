@@ -1,2 +1,0 @@
-# Sensors
-/(vendor|system/vendor)/bin/marbleLightSensor u:object_r:vendor_marbleLightSensor_exec:s0

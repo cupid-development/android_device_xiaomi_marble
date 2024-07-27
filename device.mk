@@ -31,7 +31,6 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    marbleLightSensor \
     sensors.xiaomi
 
 PRODUCT_COPY_FILES += \
