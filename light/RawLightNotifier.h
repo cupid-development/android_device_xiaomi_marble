@@ -8,10 +8,10 @@
 
 #include "SensorNotifier.h"
 
-class LightNotifier : public SensorNotifier {
+class RawLightNotifier : public SensorNotifier {
   public:
-    LightNotifier(sp<ISensorManager> manager);
-    ~LightNotifier();
+    RawLightNotifier(sp<ISensorManager> manager, process_msg_t processMsg);
+    ~RawLightNotifier();
 
   protected:
     void pollingFunction();

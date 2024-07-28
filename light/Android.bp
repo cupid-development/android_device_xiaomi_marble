@@ -2,7 +2,7 @@ cc_library_static {
     name: "libsensor-notifier-ext-light",
     vendor: true,
     srcs: [
-        "LightNotifier.cpp",
+        "RawLightNotifier.cpp",
         "SensorNotifierExt.cpp",
     ],
     shared_libs: [

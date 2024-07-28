@@ -4,9 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "LightNotifier.h"
+#include "SensorNotifierExt.h"
+#include "RawLightNotifier.h"
 
-void activateAdditionalNotifiers(sp<ISensorManager> manager) {
-    std::unique_ptr<LightNotifier> lightNotifier = std::make_unique<LightNotifier>(manager);
-    lightNotifier->activate();
+SensorNotifierExt::SensorNotifierExt(sp<ISensorManager> manager, process_msg_t processMsg) {
+    std::unique_ptr<RawLightNotifier> lightNotifier =
+            std::make_unique<RawLightNotifier>(manager, processMsg);
+    mNotifiers.push_back(std::move(lightNotifier));
 }

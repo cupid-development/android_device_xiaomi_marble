@@ -1,4 +1,0 @@
-allow vendor_sensor_notifier self:socket create_socket_perms;
-allow vendor_sensor_notifier self:qipcrtr_socket create_socket_perms;
-allowxperm vendor_sensor_notifier self:socket ioctl msm_sock_ipc_ioctls;
-allowxperm vendor_sensor_notifier self:qipcrtr_socket ioctl msm_sock_ipc_ioctls;
