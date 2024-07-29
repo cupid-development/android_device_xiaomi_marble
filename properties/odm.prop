@@ -1,0 +1,2 @@
+# Model-specific properties
+import /odm/etc/build_${ro.boot.hwc}.prop

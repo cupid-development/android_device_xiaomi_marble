@@ -1,5 +1,5 @@
-# Bluetooth
-bluetooth.device.default_name=POCO F5
-
 # Display
 vendor.display.idle_time=0
+
+# System properties
+ro.product.property_source_order=odm,vendor,product,system_ext,system

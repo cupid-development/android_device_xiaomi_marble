@@ -1,6 +1,3 @@
-on property:ro.boot.hwc=CN
-    setprop bluetooth.device.default_name "Redmi Note 12 Turbo"
-
 on property:ro.boot.product.hardware.sku=marble
     enable vendor.nfc_hal_service
     enable secureelement-hal_1_2

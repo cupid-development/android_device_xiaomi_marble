@@ -1,0 +1,9 @@
+# Indian model
+bluetooth.device.default_name=POCO F5
+vendor.usb.product_string=POCO F5
+ro.product.odm.brand=POCO
+ro.product.odm.device=marblein
+ro.product.odm.manufacturer=Xiaomi
+ro.product.odm.model=23049PCD8I
+ro.product.odm.name=marble_in_global
+ro.product.mod_device=marble_in_global
