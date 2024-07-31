@@ -15,6 +15,9 @@ include vendor/xiaomi/marble/BoardConfigVendor.mk
 
 DEVICE_PATH := device/xiaomi/marble
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := marble,marblein
+
 # Kernel modules
 BOOT_KERNEL_MODULES += \
     qcom_pm8008-regulator.ko \
