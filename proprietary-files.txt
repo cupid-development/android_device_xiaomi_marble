@@ -1159,8 +1159,8 @@ vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
 # Sensors - SSC
--vendor/lib/libssccalapi@2.0.so
--vendor/lib64/libssccalapi@2.0.so
+vendor/lib/libssccalapi@2.0.so
+vendor/lib64/libssccalapi@2.0.so
 
 # Thermal engine
 vendor/etc/thermal-4k.conf
