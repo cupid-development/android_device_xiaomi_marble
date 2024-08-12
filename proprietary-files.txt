@@ -127,15 +127,6 @@ vendor/bin/agmplay
 vendor/bin/cplay
 vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service
 vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc
--vendor/lib/libagm.so
-vendor/lib/libagm_compress_plugin.so
-vendor/lib/libagm_mixer_plugin.so
-vendor/lib/libagm_pcm_plugin.so
-vendor/lib/libagmclient.so
-vendor/lib/libagmmixer.so
-vendor/lib/libmisight.so
--vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
 -vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
@@ -150,35 +141,6 @@ vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib/hw/audio.primary.taro.so
-vendor/lib/hw/gyro_fusion_interface.so
-vendor/lib/libadm.so
-vendor/lib/libadsprpc.so
-vendor/lib/libar-acdb.so
-vendor/lib/libar-gpr.so
-vendor/lib/libar-gsl.so
--vendor/lib/libar-pal.so
-vendor/lib/libats.so
-vendor/lib/libaudio_log_utils.so
-vendor/lib/libaudiocloudctrl.so
-vendor/lib/libaudioroute_ext.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libcapiv2svacnnvendor.so
-vendor/lib/libcapiv2svarnnvendor.so
-vendor/lib/libcapiv2uvvendor.so
-vendor/lib/libdapparamstorage.so
-vendor/lib/libfmpal.so
-vendor/lib/libkaraokepal.so
-vendor/lib/liblx-ar_util.so
-vendor/lib/liblx-osal.so
-vendor/lib/libmcs.so
-vendor/lib/libpal_net_if.so
-vendor/lib/libpalclient.so
-vendor/lib/libqtigefar.so
-vendor/lib/libresampler.so
-vendor/lib/libsndcardparser.so
-vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib/vendor.qti.hardware.pal@1.0.so
 vendor/lib64/hw/audio.primary.taro.so
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/libadm.so
@@ -607,49 +569,6 @@ vendor/etc/camera/xiaomi/thirdpartysnapshot.json
 vendor/etc/camera/xiaomiSceneDetection.xml
 vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera@1.0-service.xml
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/fdconfigpreview.bin
-vendor/lib/camera/fdconfigpreviewlite.bin
-vendor/lib/camera/fdconfigvideo.bin
-vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib/camx.device@3.2-impl.so
-vendor/lib/camx.device@3.3-impl.so
-vendor/lib/camx.device@3.4-ext-impl.so
-vendor/lib/camx.device@3.4-impl.so
-vendor/lib/camx.device@3.5-ext-impl.so
-vendor/lib/camx.device@3.5-impl.so
-vendor/lib/camx.device@3.6-ext-impl.so
-vendor/lib/camx.device@3.6-impl.so
-vendor/lib/camx.device@3.7-impl.so
-vendor/lib/camx.provider@2.4-external.so
-vendor/lib/camx.provider@2.4-impl.so
-vendor/lib/camx.provider@2.4-legacy.so
-vendor/lib/camx.provider@2.5-external.so
-vendor/lib/camx.provider@2.5-legacy.so
-vendor/lib/camx.provider@2.6-legacy.so
-vendor/lib/camx.provider@2.7-legacy.so
-vendor/lib/com.qti.settings.fillmore.so
-vendor/lib/com.qti.settings.sm8450.so
-vendor/lib/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
-vendor/lib/libAF.so
-vendor/lib/libSNPE.so
-vendor/lib/libSnpeHtpV69Stub.so
-vendor/lib/libc++_shared.so
-vendor/lib/libcamxcommonutils.so
-vendor/lib/libcamxexternalformatutils.so
-vendor/lib/libcamxsettingsmanager.so
-vendor/lib/libmemunreachable.so
-vendor/lib/libmialgo_ai_vision.so
-vendor/lib/libmialgo_utils.so
-vendor/lib/libos.so
-vendor/lib/libqshcamera.so
-vendor/lib/libquickcamera.so
-vendor/lib/libsnpe_dsp_domains_v2.so
-vendor/lib/libsnpe_dsp_domains_v3.so
-vendor/lib/libsynx.so
-vendor/lib/libthreadutils.so
-vendor/lib/libxmi_slow_motion_mein.so
-vendor/lib/vendor.xiaomi.hardware.quickcamera@1.0.so
 vendor/lib64/camera/com.qti.tuned.default.bin
 vendor/lib64/camera/components/com.bots.node.vendortagwrite.so
 vendor/lib64/camera/components/com.mi.node.AIIE.so
@@ -1010,14 +929,6 @@ vendor/firmware/CAMERA_ICP_170.elf
 vendor/firmware/CAMERA_ICP_480.elf
 
 # Camera sensors
-vendor/lib/camera/com.qti.sensormodule.marble_ofilm_gc02m1_macro_i.bin
-vendor/lib/camera/com.qti.sensormodule.marble_ofilm_imx355_ultra_i.bin
-vendor/lib/camera/com.qti.sensormodule.marble_ofilm_ov64b40_wide_i.bin
-vendor/lib/camera/com.qti.sensormodule.marble_sunny_s5k3p9sp04_front_i.bin
-vendor/lib/camera/com.qti.tuned.marble_ofilm_gc02m1_macro_i.bin
-vendor/lib/camera/com.qti.tuned.marble_ofilm_imx355_ultra_i.bin
-vendor/lib/camera/com.qti.tuned.marble_ofilm_ov64b40_wide_i.bin
-vendor/lib/camera/com.qti.tuned.marble_sunny_s5k3p9sp04_front_i.bin
 vendor/lib64/camera/com.qti.actuator.marble_ofilm_ov64b40_gt9764_wide_actuator.so
 vendor/lib64/camera/com.qti.eeprom.marble_ofilm_gc02m1_p24c64f_macro_i_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.marble_ofilm_imx355_gt24p64e_ultra_i_eeprom.so
@@ -1158,8 +1069,7 @@ vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
-# Sensors - SSC
-vendor/lib/libssccalapi@2.0.so
+# Sensors - SSC calibration
 vendor/lib64/libssccalapi@2.0.so
 
 # Thermal engine
