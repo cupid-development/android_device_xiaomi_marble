@@ -850,6 +850,7 @@ vendor/lib64/libquickcamera.so
 vendor/lib64/librelight_only.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
+vendor/lib64/librmsclib1.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libsnpe_dsp_domains_v3.so
