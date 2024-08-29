@@ -718,12 +718,15 @@ vendor/lib64/libMiMotion.so
 vendor/lib64/libQnnHtpAltPrepV69Stub.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeHtpV69Stub.so
-vendor/lib64/libTrueSight.so
+# libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
+vendor/lib64/libTrueSight.so;DISABLE_CHECKELF
 vendor/lib64/libXMFaceFocus.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libalCFR.so
-vendor/lib64/libalLDC.so
-vendor/lib64/libalhLDC.so
+# libalLDC depends on NDK libnativewindow and build is unable to resolve its symbols
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF
+# libalhLDC depends on NDK libnativewindow and build is unable to resolve its symbols
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
@@ -807,7 +810,8 @@ vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
-vendor/lib64/libmorpho_ubwc.so
+# libmorpho_ubwc depends on NDK libnativewindow and build is unable to resolve its symbols
+vendor/lib64/libmorpho_ubwc.so;DISABLE_CHECKELF
 vendor/lib64/libmorpho_video_stabilizer.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libomp.so
