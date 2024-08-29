@@ -127,7 +127,7 @@ vendor/lib64/libmisight.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.taro.so
+vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-marble.so
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/libadm.so
 vendor/lib64/libadsprpc.so

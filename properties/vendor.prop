@@ -1,3 +1,6 @@
+# Audio
+ro.hardware.audio.primary=taro-marble
+
 # Display
 vendor.display.idle_time=0
 
