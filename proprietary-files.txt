@@ -115,43 +115,15 @@ vendor/etc/kvh2xml.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
+# Audio
+vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-marble.so
+-vendor/lib64/libagm.so
+-vendor/lib64/libar-pal.so
+vendor/lib64/libawcal.so
+vendor/lib64/libkaraokepal.so
+
 # Audio firmware
 vendor/firmware/aw882xx_acf.bin
-
-# Audio graph manager
--vendor/lib64/libagm.so
-vendor/lib64/libmisight.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-
-# Audio libraries
-vendor/etc/models/acd/event.eai
-vendor/etc/models/acd/music.eai
-vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-marble.so
-vendor/lib64/hw/gyro_fusion_interface.so
-vendor/lib64/libadm.so
-vendor/lib64/libadsprpc.so
-vendor/lib64/libar-acdb.so
-vendor/lib64/libar-gpr.so
-vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
-vendor/lib64/libats.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudiocloudctrl.so
-vendor/lib64/libaudioroute_ext.so
-vendor/lib64/libawcal.so
-vendor/lib64/libcapiv2svacnnvendor.so
-vendor/lib64/libcapiv2svarnnvendor.so
-vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdapparamstorage.so
-vendor/lib64/libkaraokepal.so
-vendor/lib64/liblx-ar_util.so
-vendor/lib64/liblx-osal.so
-vendor/lib64/libmcs.so
-vendor/lib64/libpal_net_if.so
-vendor/lib64/libqtigefar.so
-vendor/lib64/libresampler.so
-vendor/lib64/libxlog.so
 
 # Batterysecret
 vendor/bin/batterysecret
