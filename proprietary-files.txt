@@ -971,7 +971,6 @@ vendor/etc/mdss_dsi_m16t_36_0d_0b_dsc_vid_mi.xml
 vendor/lib64/libdisplayconfig.qti.so
 
 # Fingerprint
-odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/libgf_ca.so
