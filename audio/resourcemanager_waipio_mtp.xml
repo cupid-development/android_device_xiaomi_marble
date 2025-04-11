@@ -73,10 +73,11 @@
         <param key="signal_handler" value ="true" />
     </config_params>
     <config_volume>
-        <use_volume_set_param>0</use_volume_set_param>
+        <use_volume_set_param>1</use_volume_set_param>
         <supported_streams>
-            <supported_stream>PAL_STREAM_ULTRA_LOW_LATENCY</supported_stream>
             <supported_stream>PAL_STREAM_COMPRESSED</supported_stream>
+            <supported_stream>PAL_STREAM_PCM_OFFLOAD</supported_stream>
+            <supported_stream>PAL_STREAM_VOIP_RX</supported_stream>
         </supported_streams>
     </config_volume>
     <config_lpm>
