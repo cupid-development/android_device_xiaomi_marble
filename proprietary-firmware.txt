@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from marble V816.0.10.0.UMRMIXM
+## are from marble OS2.0.1.0.VMRMIXM
 
 abl.img;AB
 aop.img;AB
