@@ -10,14 +10,17 @@
 
 #include <android-base/logging.h>
 #include <android-base/unique_fd.h>
-#include <display/drm/mi_disp.h>
+#include <fcntl.h>
 #include <poll.h>
-#include <sys/ioctl.h>
 
 #include "SensorNotifierUtils.h"
 #include "SscCalApi.h"
 
-static const std::string kDispFeatureDevice = "/dev/mi_display/disp_feature";
+static const std::string kPanelPowerState =
+        "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/panel_power_state";
+
+// SDE_MODE_DPMS_ON
+static const int kPanelPowerOn = 0;
 
 // sensor: xiaomi.sensor.ambientlight.raw
 static const uint32_t kSensorTypeAmbientlightRaw = 33171111;
@@ -59,64 +62,38 @@ RawLightNotifier::~RawLightNotifier() {
 void RawLightNotifier::notify() {
     Result res;
 
-    android::base::unique_fd disp_fd_ =
-            android::base::unique_fd(open(kDispFeatureDevice.c_str(), O_RDWR));
-    if (disp_fd_.get() == -1) {
-        LOG(ERROR) << "failed to open " << kDispFeatureDevice;
+    android::base::unique_fd fd(open(kPanelPowerState.c_str(), O_RDONLY));
+    if (fd.get() == -1) {
+        PLOG(ERROR) << "failed to open " << kPanelPowerState;
+        mActive = false;
+        return;
     }
 
-    // Enable the sensor initially
-    res = mQueue->enableSensor(mSensorHandle, 20000 /* sample period */, 0 /* latency */);
-    if (res != Result::OK) {
-        LOG(ERROR) << "failed to enable sensor";
-    }
-
-    // Register for power events
-    disp_event_req req;
-    req.base.flag = 0;
-    req.base.disp_id = MI_DISP_PRIMARY;
-    req.type = MI_DISP_EVENT_POWER;
-    ioctl(disp_fd_.get(), MI_DISP_IOCTL_REGISTER_EVENT, &req);
-
-    struct pollfd dispEventPoll = {
-            .fd = disp_fd_.get(),
-            .events = POLLIN,
+    struct pollfd powerStatePoll = {
+            .fd = fd.get(),
+            .events = POLLERR | POLLPRI,
+            .revents = POLLPRI,
     };
 
     while (mActive) {
-        int rc = poll(&dispEventPoll, 1, -1);
-        if (rc < 0) {
-            LOG(ERROR) << "failed to poll " << kDispFeatureDevice << ", err: " << rc;
-            continue;
-        }
-
-        std::shared_ptr<disp_event_resp> response = parseDispEvent(disp_fd_.get());
-        if (response == nullptr) {
-            continue;
-        }
-
-        if (response->base.type != MI_DISP_EVENT_POWER) {
-            LOG(ERROR) << "unexpected display event: " << response->base.type;
-            continue;
-        }
-
-        int value = response->data[0];
-        LOG(VERBOSE) << "received data: " << std::bitset<8>(value);
-
-        switch (response->data[0]) {
-            case MI_DISP_POWER_ON:
+        int value;
+        if (readInt(fd.get(), &value)) {
+            if (value == kPanelPowerOn) {
                 res = mQueue->enableSensor(mSensorHandle, 20000 /* sample period */,
                                            0 /* latency */);
                 if (res != Result::OK) {
                     LOG(ERROR) << "failed to enable sensor";
                 }
-                break;
-            default:
+            } else {
                 res = mQueue->disableSensor(mSensorHandle);
                 if (res != Result::OK) {
                     LOG(ERROR) << "failed to disable sensor";
                 }
-                break;
+            }
+        }
+
+        if (poll(&powerStatePoll, 1, -1) < 0) {
+            PLOG(ERROR) << "failed to poll " << kPanelPowerState;
         }
     }
 }
